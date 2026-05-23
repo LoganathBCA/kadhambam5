@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#fff8f2" />
+
+  <!-- SEO -->
+  <title>Kadhambam Premium Dry Fruits &amp; Nuts from Tamil Nadu</title>
+  <meta name="description"
+    content="Kadhambam offers premium sulphur-free dry fruits, organic nuts, and dried berries sourced directly from Tamil Nadu farms. Delivery at just ₹40/kg." />
+  <meta name="keywords"
+    content="dry fruits, organic nuts, almonds, cashews, walnuts, Tamil Nadu, sulphur free, Kadhambam" />
+  <meta property="og:title" content="Kadhambam Premium Dry Fruits &amp; Nuts" />
+  <meta property="og:description"
+    content="Farm to doorstep. Sulphur-free, organically sourced dry fruits and nuts from Tamil Nadu." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/src/assets/slide1.webp" />
+
+  <!-- Favicon (WebP logo) -->
+  <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+
+  <!-- ── Performance: Preconnect to critical third-party origins ── -->
+  <!-- Google Fonts preconnect — eliminates DNS + TLS handshake from critical path -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Firebase preconnect -->
+  <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossorigin />
+  <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+
+  <!-- ── Performance: Preload LCP image (first carousel slide) ── -->
+  <!-- This is the LARGEST Contentful Paint element — preloading it improves LCP score -->
+  <link
+    rel="preload"
+    as="image"
+    href="/src/assets/slide1.webp"
+    type="image/webp"
+    fetchpriority="high"
+  />
+
+  <!-- Preload the logo (above-the-fold) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/src/assets/logo.png"
+    fetchpriority="high"
+  />
+
+  <!-- ── Performance: Google Fonts loaded with display=swap (non-render-blocking) ── -->
+  <!-- Using &display=swap ensures text shows immediately with fallback font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <!-- Immediate fallback for no-JS environments -->
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+
+  <!-- ── Performance: Critical CSS inline — prevents FOUC ── -->
+  <style>
+    /* Font-display: swap fallback stacks — prevents invisible text during font load */
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #fff8f2;
+      color: #231a0a;
+      margin: 0;
+    }
+    /* Reserve space for header so no layout shift */
+    #root > *:first-child {
+      min-height: 68px;
+    }
+    /* Prevent carousel from causing CLS — reserve its height */
+    .carousel-wrapper {
+      aspect-ratio: 16/7;
+      background: #e9d8be;
+      overflow: hidden;
+    }
+    /* Material Symbols font-display: block to avoid invisible icons */
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined', sans-serif;
+      font-display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- type="module" is deferred by default — not render-blocking -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
